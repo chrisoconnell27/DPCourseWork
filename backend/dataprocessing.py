@@ -1,0 +1,35 @@
+# ------------------------------------------------------------------------ #
+# Initialization
+# ------------------------------------------------------------------------ #
+
+# Load dependencies
+# ---------------------------------------------#
+import pandas as pd
+
+# ------------------------------------------------------------------------ #
+# Define Functions
+# ------------------------------------------------------------------------ #
+
+# location_mobility_data
+# ----------------------------
+def location_mobility_data(longitude, latitude):
+
+    # Load the data
+    mobility_df = pd.read_csv("backend/data/CoronaData.csv", 
+        encoding="utf-8")
+
+    # Reverse geocode (longitude, latitude > country)
+    country = "United States of America"
+
+    # Extract data for country
+
+    # Extract data for walking & calculate change in # of walking calls
+    walking_chg = 20
+
+    # Extract data for driving & calculate change in # of driving calls
+    driving_chg = 30
+
+    # Return the results
+    return([country, walking_chg, driving_chg])
+
+
